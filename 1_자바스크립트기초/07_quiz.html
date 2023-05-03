@@ -12,7 +12,7 @@
             
             var ranNum = Math.floor((Math.random()*100)+1);
 
-            var value = prompt('수를 입력해 주세요.');
+            var value = prompt(`수를 입력해 주세요.`);
 
             while(ranNum != value){
                 if(value>ranNum){
@@ -20,7 +20,7 @@
                 }else{
                     console.log("up");
                 }          
-                value = prompt("다시 다음 값을 입력해주세요.");
+                value = prompt(`다시 다음 값을 입력해주세요.`);
             }
             console.log(`정답입니다!`);
         </script>
