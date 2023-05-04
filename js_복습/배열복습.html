@@ -1,0 +1,17 @@
+<script>
+
+    var houseWork = ['설거지', '청소', '빨래', '저녁'];
+
+    while(houseWork.length>0){
+        var check = prompt(`현재 남아있는 집안일 : ${houseWork}\n처리한 집안일을 입력해주세요.`);
+       
+        if(houseWork.includes(check)){
+            houseWork.splice(houseWork.indexOf(check),1);
+            alert(`체크완료했습니다! \n현재 남아있는 집안일 : ${houseWork}` );            
+        }else{
+            alert(`잘못된 입력입니다. 다시 한번 입력해주세요.`);
+        }
+    }
+alert(`전부 체크 완료되었습니다.`);
+
+</script>

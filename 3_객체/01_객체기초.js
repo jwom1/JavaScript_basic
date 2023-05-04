@@ -7,18 +7,18 @@ var cat = {
     kind : '스코티시폴드', // 언제 더 추가될지 모르니 마지막 요소에도 ,를 붙여주는 것이 좋다.
 };
 
-var watermonitor = {
+var waterMonitor = {
     name : '뚜뚜',
     age : 5,
     hobbies : ['산책하기', '수영하기'],
     kind : '물왕도마뱀',
 };
 
-console.log(`객체1 타입 : ${typeof cat}, 객체2 타입 : ${typeof watermonitor}`);
+console.log(`객체1 타입 : ${typeof cat}, 객체2 타입 : ${typeof waterMonitor}`);
 // 저장된 데이터 참조하기
 console.log(cat.name);
-console.log(watermonitor.age);
-console.log(watermonitor.hobbies);
+console.log(waterMonitor.age);
+console.log(waterMonitor.hobbies);
 
 console.log(cat.hobbies[1]);
 
@@ -31,32 +31,32 @@ console.log(cat[`age`]); // 객체명['키값']으로도 조회 가능
 
 // 없던 프로퍼티(키, 벨류값 쌍) 추가하기
 cat.owner = '채종훈';
-watermonitor.owner = '박재원';
+waterMonitor.owner = '박재원';
 console.log(cat);
 
 // 프로퍼티 삭제
 delete cat.owner;
 console.log(cat);
 
-console.log("-------------------------------");
+console.log("------------------------------------------");
 
 //프로퍼티의 유무 확인
 // key값을 반드시 문자열로 제시해야함
 var ageFlag = 'ageaaaa' in cat; // cat객체 내부에 age 키값이 존재하는지?
 console.log(ageFlag);
 
-//master라는 프로퍼티가 없을 떄 추가하도록 처리
+//master라는 프로퍼티가 없을 때 추가하도록 처리
 if(!('master' in cat)){
     cat['master'] = '룰루주인';
 }
 
 console.log(cat);
 
-console.log("=========================");
+console.log("=======================================");
 // 객체를 순회하는 반복문
 // key를 반복해서 출력해줌
-for(var k in watermonitor){    
-    console.log(`watermonitor의 키값 : ${k}, 매칭된 value값 : ${watermonitor[k]}`);
+for(var k in waterMonitor){    
+    console.log(`waterMonitor의 키값 : ${k}, 매칭된 value값 : ${waterMonitor[k]}`);
 }
 
 // 객체의 중첩
